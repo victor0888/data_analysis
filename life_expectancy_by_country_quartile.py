@@ -49,7 +49,7 @@ plt.ylabel("Life Expectancy")
 plt.title('Life Expectancy by Country')
 plt.show()
 
-# VIOLINE PLOT LIFE EXPECTANCY COMPARISON
+# VIOLINE PLOT LIFE EXPECTANCY COMPARISON - The observation here is that Zimbabwe has the lowest Life Expectancy out of all six countries.
 fig = plt.subplots(figsize=(15, 10))
 sns.violinplot (
     data=data2,
@@ -62,7 +62,7 @@ plt.savefig("Codecademy_violinplot_Life_Expectancy.png")
 plt.show()
 
 
-# lINE PLOT OF LIFE EXPECTANCY PER YEAR PER COUNTRY
+# LINE PLOT OF LIFE EXPECTANCY PER YEAR PER COUNTRY - Year by year, the Life Expactancy in Zimabwe has increased beyond 2014.
 gr = sns.FacetGrid(
 
     data2,
@@ -78,7 +78,7 @@ gr.fig.suptitle("Line Plot for Life Expectancy period of year 2000 to 2015.")
 #gr.set_xticklabels(rotation=90)
 plt.show()
 
-# Has GDP increased over time in the six nations? - Our observation is that GDP has increased over time for China, USA, Mexico, Chile, and Germany overall. 
+# Has GDP increased over time in the six nations? - Our observation is that GDP has increased over time for China, USA, Mexico, Chile, and Germany overall. Zimbabwe GDP has been stagnating.
 f, ax = plt.subplots(figsize=(10, 15))
 
 ax = sns.barplot(data=data2, x="Country", y="GDP", hue="Year")
@@ -102,7 +102,7 @@ plt.subplots_adjust(top=0.9)
 gr.fig.suptitle("Line Plot for GDP period of year 2000 to 2015.")
 plt.show()
 
-# GDP AND LIFE EXPECTANCY PER YEAR AND COUNTRY
+# GDP AND LIFE EXPECTANCY PER YEAR AND COUNTRY - We can clearly find corelation between very low GDP and Life Expectancy for Zimbabwe. However the same does not apply for Chie and Mexico as the GDP for these two countries is relatively low, but life expectancy is 80.5 and 76.7 retrospectively.
 gr = sns.FacetGrid(
 
     data2,
